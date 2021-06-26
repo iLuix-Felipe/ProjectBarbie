@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue-neutral: 323;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+/*Definir algumas variaveis padrões e facilitar*/
+
+.inner-width {
+    max-width: 1500px;
+    padding: 0 40px;
+    margin: auto;
+    /*configurações padrão para um template da páginá*/
+}
+
+.space {
+    height: 30vh;
+}
+
+.navbar {
+    z-index: 999;
+    /*para sobrepor outros elementos*/
+    position: fixed;
+    /*fixar o container*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    /*posicionar no topo*/
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*definir como uma linha os elementos e separar entre espaços*/
+    background-color: rgba(253, 121, 168, .8);
+    transition: .3s;
+    /*transição para o hover effect*/
+}
+/*Configurações da barra de navegação*/
+.return-btn {
+    background-color: #FDA7DF;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*definido como flexivel alinhar o elemento seta ao centro do botão return*/
+    cursor: pointer;
+    border: 2px solid #000;
+}
+
+.return-btn a {
+    color: #000;
+    text-decoration: none;
+    height: 60px;
+    width: 60px;
+    /*tamanho*/
+    border-radius: 50%;
+    /*borda redonda*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*ajustar os elementos ao centro*/
+    cursor: pointer
+}
+
+.section-aba h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+}
+
+#ranking-container {
+    padding: 20px 0;
+}
+
+.sticky {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 18px 40px;
+    /*uma classe de alternancia para o nav bar*/
+}
+
+.inner-container {
+    width: 100%;
+    height: 100%;
+    /*configurações para ocupar todo o espaço do container*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*separar os itens por espaços e alinhalos ao centro*/
+}
+
+.container-text {
+    background: url(../img/backgroundgame.png) no-repeat center;
+    background-size: cover;
+    /*background sem repetição, no centro e como cover*/
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /*se comportar como coluna e separar por espaços*/
+}
+
+.text-title h1,
+.text-title h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    /*title como negrito e tamanho da fonte e estilos alterados*/
+}
+
+.text p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    background: rgba(253, 121, 168, .8);
+    padding: 5px 0;
+    border-radius: 10px;
+    /*alinhar texto ao centro, fonte cor e background alterados*/
+    /*espaçamento e borda redonda com 10px*/
+}
+
+table {
+    background-color: #f78fb3;
+    padding: 20px;
+    border-radius: 10px;
+    /*borda redonda, espaçamento e background*/
+}
+
+td {
+    padding: 10px;
+    margin: 0 2px;
+}
+
+#quiz-container {
+    --hue: var(--hue-neutral);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 30%);
+    /*altura cobrindo 100 da visualização de altura*/
+    /*container definido como flexivel para alinhamento centralizado*/
+}
+
+#quiz-container.correct {
+    --hue: var(--hue-correct);
+    /*faz parte da alternancia de cores do javascript*/
+}
+
+#quiz-container.wrong {
+    --hue: var(--hue-wrong);
+    /*faz parte da alternancia de cores do javascript*/
+}
+
+.container {
+    width: 600px;
+    max-width: 80%;
+    /*largura definida como 80% para um padrão de responsividade*/
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px 2px;
+    /*box shadow com blur para dar estilo ao redor do container*/
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+    /*utilizei a estrategia de template grid para esse caso das respostas*/
+    /*alinhar em duas fileiras verticalmente*/
+    margin: 20px 0;
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 2px solid hsl(var(--hue), 100%, 20%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    /*para dar as cores usei o hue-saturation-light, para dar os efeitos*/
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    /*faz parte da alternancia de cores com js*/
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+    /*mesmo do de cima*/
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    /*efeito de levantamento do container button*/
+    border: 2px solid black;
+    background-color: hsl(var(--hue), 100%, 50%);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*alinihar os controles ao centro do container*/
+}
+
+.hide {
+    display: none;
+    /*javascript, faz parte do jogo*/
+}
+
+#question,
+.controls button {
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+.btn-grid button {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 800px) {
+    .inner-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        /*wrap para dar quebra de linha quando necessario*/
+        overflow: scroll;
+        /*overflow definido como scroll para ter acesso ao container inteiro*/
+    }
+    table {
+        overflow: hidden;
+    }
+}

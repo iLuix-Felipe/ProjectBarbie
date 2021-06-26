@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kalam&family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    /*configurações gerais que melhoram na edição*/
+}
+
+#home {
+    background: url(../img/rosinha2.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    /*background imovel, sem repetir e centralizado*/
+    height: 100vh;
+    min-height: 500px;
+    /*visualização do container inteiro e com uma altura minima*/
+    color: #fff;
+}
+
+#dialog {
+    display: none;
+    /*não mostrar essas configurações agora*/
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    /*posição fixada com a rolagem*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*configurações para ocupar a tela inteira desde o topo até o bottom*/
+    z-index: 999;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    /*centralização horizontal e vertical*/
+}
+
+#dialog .dialog-content {
+    background: #FD79A8;
+    border-radius: 10px;
+    /*bordar redondas*/
+    border: 1px solid #fff;
+    width: 300px;
+    /*largura padrão*/
+    font-weight: 1000;
+    /*espessura da fonte*/
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    /*container flexivel e children separados por um espaço entre eles*/
+}
+
+.dialog-content span {
+    color: #000;
+    float: right;
+    /*elemento flutuante a direita*/
+    font-size: 28px;
+    font-weight: bold;
+    /*fonte em negrito*/
+}
+
+.dialog-content span:hover,
+.dialog-content span:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /*com o container flexivel, defini comportamento como uma linha e os children centralizados verticalmente e horizontalmente*/
+}
+
+.logo p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.0rem;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    /*tamanho*/
+}
+
+.navbar {
+    background: rgba(253, 121, 168, .8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 25px 0;
+    z-index: 999;
+    transition: .3s linear;
+    /*barra de navegação fixada ocupado toda a largura e sobreposta a outross elementos da pagina */
+}
+
+.inner-width {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+    /*uma configuração default de templete*/
+}
+
+.navbar .inner-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*elementos do inner-width separados por um espaço entre eles e centralizados*/
+}
+
+.menu-toggler {
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    /*bordas desativadas externas e internas, mostrar o cursor com uma mãozinha quando estiver acima do elemtno*/
+    position: relative;
+    /*posição relativa ao navbar*/
+    z-index: 999;
+    /*sobreposição acima dos outros elemntos*/
+    display: none;
+    /*o menu toggler com uma posição relativa ao menu de navegação */
+}
+
+.menu-toggler span {
+    display: block;
+    /*comportamento como um bloco*/
+    height: 3px;
+    /*altura de 3px para dar uma caracteristica de botão*/
+    background: #fff;
+    position: relative;
+    /*posição relativa ao container father*/
+    margin: 6px 0;
+    transition: .3s linear;
+}
+
+.nav-menu a {
+    color: #000;
+    font-size: 0.90rem;
+    font-weight: 500;
+    /*espessura da fonte*/
+    margin-left: 30px;
+    transition: .2s linear;
+    text-transform: uppercase;
+    /*todo o texto em caixa alta*/
+    font-family: 'Kalam', cursive;
+}
+
+.icons {
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+.nav-menu a:hover {
+    color: rgba(0, 0, 0, .5) !important;
+    border-bottom: rgba(0, 0, 0, .5) 1px solid;
+}
+
+.sticky {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 18px 0;
+}
+
+.sticky .nav-menu a {
+    color: #111;
+}
+
+.sticky .menu-toggler span {
+    background-color: #fd79a8;
+}
+/*configurações de sticky para o efeito do jquery de rolagem*/
+
+#home .inner-width {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    /*container flexivel e configurações de alinhamento centralizado*/
+}
+
+#home .content {
+    width: 100%;
+}
+
+#home .content h1 {
+    background-color: rgba(0, 0, 0, .8);
+    font-family: 'Dancing Script', cursive;
+    padding: 20px 0;
+    /*configurações de espaçamento e tipo de fonte alteradas*/
+    border-radius: 30px;
+    font-size: 40px;
+    /*tamanho da fonte*/
+    margin-bottom: 40px;
+}
+
+#home .content h1::after {
+    content: 'princesa';
+    color: #FD79A8;
+    animation: textanim 9s linear infinite;
+    /*animação de titulo da página com uma duração de 9s para complementar com a ideia posterior*/
+}
+
+@keyframes textanim {
+    50% {
+        content: 'Barbie';
+        color: #FD79A8;
+        /*em 4,5s (50% do tempo) irá alterar o texto, realizando a animação*/
+    }
+}
+
+.rs a {
+    font-size: 18px;
+    color: #fff;
+    margin: 0 10px;
+    transition: transform .2s linear;
+    /*configurações para os links de redes socias abaixo do titulo*/
+}
+
+.rs a:hover {
+    color: #FD79A8;
+    transform: scale(2.5);
+    /*aumentar a escala de visão do container*/
+}
+
+#text-one h2 {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
+    color: #FD79A8;
+    text-align: center;
+    /*configurações de cores, centralização e espaçamento*/
+}
+
+#text-one {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*container flexivel com compartamento de linha e quebra de linha quando um elemento estiver no extremo do limite definido*/
+    justify-content: center;
+    /*children centralizados*/
+}
+
+#text-one .content-texts {
+    padding: 20px;
+    text-align: justify;
+    /*texto justificado para ficar tudo certinho*/
+    margin: auto;
+    width: 300px;
+}
+
+#text-one .content-texts p {
+    color: #FD79A8;
+    font-weight: 1000;
+    /*espessurada fonte*/
+    margin: 10px 0;
+    text-shadow: 1px 1px 1px rgba(253, 121, 168, .8);
+    /*sombras com configurações de 1px para a fonte*/
+}
+
+#contact-tab {
+    min-height: 500px;
+    background-color: #000;
+}
+
+#contact-tab .inner-width-c {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    /*container flexivel comportado como linha e separados os children por espaços entre eles*/
+    padding: 0 40px;
+    /*espaçamento*/
+}
+
+#contact-tab .contact-info {
+   
+    color: #fff;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+    /*container flexivel com compartamento como uma coluna e centralizados os children*/
+}
+
+.contact-info h2 {
+    text-align: center;
+    /*texto centralizado*/
+    margin: 30px 0;
+    font-size: 30px;
+    border-bottom: 2px solid #fff;
+    /*borda de baixo branca sendo uma linha*/
+}
+
+.contact-info .item {
+    margin: 30px 0;
+}
+
+.contact-info .item i {
+    width: 50px;
+    height: 50px;
+    /*configurações de tamanho*/
+    background-color: #FD79A8;
+    border-radius: 50%;
+    /*bordar redondas*/
+    text-align: center;
+    /*texto centralizdo*/
+    line-height: 50px;
+    /*um espaço entre paragrafos de 50px*/
+}
+
+.contact-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: center;
+    margin-top: auto;
+    /*container flexivel, children separados por espaços entre eles e centralizados; quebrar linha quando necessario*/
+}
+
+.contact-form .text-m {
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    width: calc(50%-10px);
+    /*calc para obter uma area mais precisa*/
+    height: 50px;
+    justify-content: center;
+    /*centralizar os elementos*/
+}
+
+textarea {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+    height: 50px;
+    padding: 20px;
+    line-height: 50px;
+    border: none;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    /*configurações genericas para uma caixa de texto*/
+}
+
+#text-s {
+    width: 80px;
+    margin-left: auto;
+    background-color: #FD79A8;
+    color: #fff;
+    font-weight: 1000;
+    /*espessura do texto*/
+    text-transform: uppercase;
+    /*texto em caixa alta*/
+    border: 2px solid #FD79A8;
+    transition: 0.3s linear;
+    cursor: pointer;
+    text-align: center;
+    /*alinhar texto verticalmente*/
+}
+
+#text-s:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #FD79A8;
+    font-weight: 1000;
+    /*configurações de espessura e bacckground editadas*/
+}
+
+#audio {
+    opacity: 0;
+    /*esocnder o audio da pagina inicial*/
+}
+
+@media screen and (max-width: 800px) {
+    /*novas configurações de pagina para uma tela de até 800px*/
+    .menu-toggler {
+        display: block;
+    }
+    .nav-menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #e84393;
+        top: 0;
+        right: -100%;
+        max-width: 400px;
+        padding: 80px 50px;
+        transition: 0.3s linear;
+        /*fixar o menu para posiciona-lo ao lado e esconde-lo com -100%*/
+    }
+    .nav-menu a {
+        display: block;
+        color: #fff;
+        font-size: 1.2rem;
+        margin: 30px 0;
+        padding: 5px;
+        /*novas configurações para os itens do menu de navegação*/
+    }
+    .icons {
+        font-size: 1.3rem;
+    }
+    .nav-menu a:hover {
+        background-color: #fff;
+        color: #FD79A8 !important;
+        border: none !important;
+        /*prioridade nessas mudanças com o hover effect*/
+    }
+    .sticky .nav-menu {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .nav-menu.active {
+        right: 0;
+    }
+    .menu-toggler.active span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 4px;
+        
+    }
+    .menu-toggler.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggler.active span:nth-child(3) {
+        transform: rotate(45deg);
+        bottom: 14px;
+    }
+    /*esses transforms ai foi só para dar o efeito de X para fechar o menu*/
+    #contact-tab {
+        display: flex;
+    }
+    .inner-width-c {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .inner-width-c h2 {
+        font-size: 25px;
+        width: 200px;
+    }
+    .contact-info,
+    .contact-form {
+        flex: 100%;
+        margin: 20px 0;
+    }
+    .contact-info .item {
+        width: 100%;
+    }
+    .contact-form {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contact-form .text-m {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    /*configurações genericas de novos tamanhos*/
+}

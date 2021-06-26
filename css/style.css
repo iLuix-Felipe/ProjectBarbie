@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    /*definindo background do corpo*/
+    background-color: #FD79A8;
+}
+
+
+/*ideia de banner também usado na aba de joguinhos
+"Um pouco sobre nós"
+*/
+
+.bannerAbout {
+    height: 5vh;
+    width: 100%;
+}
+
+.bannerAbout h3 {
+    /*Formatações do h3 do banner, definindo font, tamanho cor e deixando centralizada*/
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.space {
+    /* Como o navbar é fixo e sobreposto, as coisas colocadas depois ficam abaixo dela, esse foi uma das maneiras utilizadas para as coisas ficarem depois do navbar
+            como se fosse uma barra embaixo do navbar, só que nos mesmo empilhamento do conteudo do site*/
+    height: 100px;
+    display: fixed;
+}
+
+.inner-twidth {
+    /* Definindo a largura máxima para os elementos não ultrapassar esse valor*/
+    max-width: 1500px;
+    padding: 0 40px;
+    margin: auto;
+}
+
+
+/*INICIO DA BARRA DE MENU*/
+
+.navbar {
+    z-index: 999;
+    /*Para o nav bar ficar sobreposto, é como se tivesse um empilhamento e ele fosse a primeira fila*/
+    position: fixed;
+    /*fixar a barra em uma posição, conforma mudança no scroll ela continua fixa*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 25px 40px;
+    display: flex;
+    /*Deixar o display flex, essa é nossa forma de alinhar coisas no meio ou fazer espaçamentos para organização*/
+    flex-direction: row;
+    /*Esse display flex irá ter direção em linha*/
+    justify-content: space-between;
+    /*justificando o conteudo dentro do nav bar, nesse caso, eles terão um espaço entre eles*/
+    background-color: rgba(253, 121, 168, .8);
+    transition: .3s;
+    /*tempo transição para a mudança de cor em um sticky logo abaixo*/
+}
+
+.sticky {
+    /*classe responsável pela mudança de cor do nav bar, conforme o scroll, foi utilizado js*/
+    background: rgba(255, 255, 255, 0.9);
+    padding: 18px 40px;
+}
+
+.return-btn {
+    /*Botão de voltar*/
+    background-color: #FDA7DF;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    /*deixando o botão redondo*/
+    display: flex;
+    /*Display flex para alinhar os itens no centro, tanto verticalmente e horizontalmente*/
+    align-items: center;
+    /* alinhar itens no centro verticalmente*/
+    justify-content: center;
+    /*alinhar itens no centro horizontalmente*/
+    cursor: pointer;
+    /*deixar o cursor com aquela mãozinha para click*/
+    border: 2px solid #000;
+}
+
+.return-btn a {
+    /*link dentro do botão com as mesmas configurações do botão para voltar no botão inteiro*/
+    color: #000;
+    text-decoration: none;
+    /*retirando underline do link*/
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.section-aba h2 {
+    font-family: 'Dancing Script', cursive;
+    /* fonte do h2 e deixando o estilo mais cursivo para ficar mais "fru fru"*/
+    font-size: 2.5rem;
+}
+
+.inner-width {
+    /*margin no topo para separar um pouco do banner*/
+    margin-top: 50px;
+    /*display flexivel para alinhar e justificar no centro*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FD79A8;
+    height: 140vh;
+    /* altura de 140 na visualização da altura*/
+    padding: 20px;
+}
+
+.profiles-screen {
+    /*largura e altura definido como 100%*/
+    width: 100%;
+    height: 100%;
+    /*display flex para alinhar no centro e dá um espaçamento*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile-card {
+    /*background, borda redonda, largura e altura definidos*/
+    background-color: #000;
+    border-radius: 10px;
+    height: 620px;
+    width: 350px;
+    /*Display flex para alinhar tudo no centro e dá espaçamento*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*direção para coluna, para ficar um abaixo do outro*/
+    flex-direction: column;
+}
+
+.profile-img {
+    /*display flex para alinhar a imagem no centro*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*definindo largura e altura e deixando a div redonda*/
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    /*cor de fundo para dá um aspecto de borda na imagem que vai ser posta*/
+    background-color: #fff;
+    margin: 20px;
+}
+
+.profile-img img {
+    /*definindo largura e altura menor que a div anterior e deixando redonda, ela vai sobreposta e com uma borda*/
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.profile-about {
+    /*Display flex para justificar e alinhar no centro*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*direção de coluna para ficar um abaixo do outro*/
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/*formatações do h3 e h4*/
+
+.profile-about h3 {
+    color: #f1f1f1;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.profile-about h4 {
+    color: #FD79A8;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+
+/*profile referente aos links de twitter, instagram e curriculo*/
+
+.profile-social-media {
+    width: 50%;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*formatação dos icones da classe*/
+
+.profile-social-media i {
+    font-size: 1.9rem;
+    color: #fff;
+    transition: .3s linear;
+}
+
+
+/* Deixando os curriculos com tudo centralizado,tanto para tela grande, e facilitaria a visualização para telas menores*/
+
+.curriculo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.curriculo p {
+    font-size: .6rem;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.curriculoJunior {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.curriculoJunior p {
+    font-size: .6rem;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.curriculoLuiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.curriculoLuiz p {
+    font-size: .6rem;
+    color: #fff;
+    font-weight: bolder;
+}
+
+
+/*hover dos icones*/
+
+.profile-social-media i:hover {
+    transform: scale(1.5);
+    /*aumentando a escala*/
+}
+
+
+/*definindo uma cor para cada icone*/
+
+.profile-social-media .twt:hover {
+    color: #48dbfb;
+}
+
+.profile-social-media .ins:hover {
+    color: #ff9ff3;
+}
+
+.profile-social-media .crr:hover {
+    color: #1dd1a1;
+}
+
+
+/*profile para contato no wpp*/
+
+.profile-contact {
+    margin: 10px 0;
+    /*display flex para alinhar e justificar no centro*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*borda com dois pixels, solid e rosinha*/
+    border: 2px solid #FD79A8;
+    border-radius: 10px;
+    /*largura e altura definidos*/
+    width: 60%;
+    height: 10%;
+    cursor: pointer;
+    /*cursor definido para aquela mãozinha de click*/
+    transition: .2s linear;
+    /*transição para effect hover*/
+}
+
+.profile-contact a {
+    /*definindo a cor e deixando o link em negrito*/
+    color: #FD79A8;
+    font-weight: bolder;
+}
+
+
+/*hover do link de profile-contact*/
+
+
+/*mudança de background e da cor da fonte*/
+
+.profile-contact:hover {
+    background-color: #FD79A8;
+}
+
+.profile-contact:hover .link {
+    color: #fff;
+}
+
+
+/*aba de descrição do desenvolvedor*/
+
+.profile-text {
+    /*texto justificado, com espaçamento de30px para cima e baixo e 40px para os lados*/
+    text-align: justify;
+    padding: 30px 40px;
+    background-color: #fff;
+    width: 100%;
+    /*definindo borda redonda só em baixo e na esquerda*/
+    border-radius: 0 0 10px 10px;
+}
+
+.profile-text p {
+    font-weight: bolder;
+}
+
+
+/*espaçamento para baixo para a página não ficar colada com os cartões*/
+
+.nada {
+    height: 500px;
+}
+
+
+/*responsividade*/
+
+@media screen and (max-width: 1000px) {
+    /*definindo os cartões para ficarem como coluna*/
+    /*não precisou definir em outras classes, já que tdudo já estava alinhado no centro */
+    .profiles-screen {
+        flex-direction: column;
+    }
+    .inner-width {
+        /*altura de 240 da altura de visualização*/
+        height: 240vh;
+    }
+}

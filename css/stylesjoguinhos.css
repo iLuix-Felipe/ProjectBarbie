@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.inner-width {
+    max-width: 1500px;
+    padding: 0 40px;
+    margin: auto;
+}
+
+
+/*INICIO DA BARRA DE MENU*/
+
+.navbar {
+    z-index: 999;
+    /*para sobrepor outros elementos*/
+    position: fixed;
+    /*fixar o container*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    /*posicionar no topo*/
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*definir como uma linha os elementos e separar entre espaços*/
+    background-color: rgba(253, 121, 168, .8);
+    transition: .3s;
+    /*transição para o hover effect*/
+}
+
+.return-btn {
+    background-color: #FDA7DF;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*definido como flexivel alinhar o elemento seta ao centro do botão return*/
+    cursor: pointer;
+    border: 2px solid #000;
+}
+
+.return-btn a {
+    color: #000;
+    text-decoration: none;
+    height: 60px;
+    width: 60px;
+    /*tamanho*/
+    border-radius: 50%;
+    /*borda redonda*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*ajustar os elementos ao centro*/
+    cursor: pointer
+}
+
+.section-aba h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+}
+
+
+/*FIM DA BARRA DE MENU*/
+
+
+/*INICIO DO CORPO 1*/
+
+#section-a {
+    margin-top: 120px;
+    height: 75vh;
+}
+
+.first-image {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*container flexivel ocupando toda a largura; comportamento em linha alinhado ao centro; */
+}
+
+.first-image h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.first-image img {
+    width: 200px;
+    height: 200px;
+    /*tamanho da primeira imagem*/
+}
+
+
+.second-image {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*container flexivel ocupando toda a largura; comportamento em linha alinhado ao centro; */
+}
+
+.second-image .text-info {
+    color: #000;
+    background-color: #FDA7DF;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: groove;
+    
+}
+
+.text-info h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+}
+
+.text-info p {
+    font-family: cursive;
+}
+
+.second-image img {
+    width: 200px;
+    height: 200px;
+}
+
+
+/*FIM DO CORPO 1*/
+
+
+/*INICIO DO CORPO 2*/
+
+.section-b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*alinhar itens ao centro horizontalmente e verticalmente*/
+    height: 85vh;
+    /*85 da visualizacao da altura*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*comprtamento como uma coluna e ao centro*/
+    margin-bottom: 20px;
+    background: url(../img/backgroundpink.png) no-repeat center;
+    background-attachment: local;
+    background-size: cover;
+    /*background sem repeticao e ao centro. Não se mover durante o Scroll*/
+}
+
+.info-section-b {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*separar itens por um espaço ao redor*/
+}
+
+.box-b {
+    width: 300px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #FDA7DF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    /*largura do container em 300px definido como flexivel e comportamento em coluna dos childrens dele
+    separador por espaços e alinhados ao centro
+    */
+    
+}
+
+.box-b h3,
+.box-b p,
+.box-b li {
+    font-family: "Roboto", sans-serif;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.tela-slide {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.screen-dark {
+    z-index: 999;
+    /*o elemento irá sobrepor-se acima dos demais*/
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    /*posição absoluta para um posicionamento preciso*/
+    bottom: -36%;
+    height: 306px;
+    width: 300px;
+    /*definições de tamanho*/
+    border-radius: 8px;
+}
+
+
+/*.centro{
+	position:relative;
+	left:50%;
+	top:20%;
+	transform:translate(-50%, -20%);
+}*/
+
+.nav {
+    /*position:absolute;
+	left:50%;
+	bottom:-50%;
+    transform:translateX(-50%);*/
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: black;
+    /*alinhamento ao centro e comportamento para os childrens definido como uma linha*/
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.nav i {
+    color: white;
+    height: 30px;
+    width: 30px;
+    /*tamanho e cor do elemento de tag i*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*alinhamento ao centro do container*/
+    background-color: rgba(253, 121, 168, .8);
+    border-radius: 50%;
+    /*border redondas*/
+}
+
+.bar {
+    width: 50px;
+    height: 10px;
+    /*configurações de tamanho*/
+    border: 1px solid #FDA7DF;
+    border-radius: 2px;
+    margin: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.bar:hover {
+    background: #FDA7DF;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+    /*esconder o botão*/
+}
+
+.slides {
+    width: 400%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked~.s1 {
+    margin-left: 0;
+}
+
+#r2:checked~.s1 {
+    margin-left: -25%;
+}
+
+#r3:checked~.s1 {
+    margin-left: -50%;
+}
+
+#r4:checked~.s1 {
+    margin-left: -75%;
+}
+/*configurações para dar um efeito deslizante aos children do container*/
+
+
+/*FIM DO CORPO 2*/
+
+.sticky {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 18px 40px;
+}
+
+
+/*INICIO DO CORPO 3*/
+
+.section-c {
+    height: 60vh;
+    margin-top: 20vh;
+}
+
+.games {
+    background: url(../img/fundo.jpg) no-repeat center;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+}
+
+.info-games-c {
+    height: 10vh;
+    width: 100%;
+}
+
+.info-games-c h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+/*FIM DO CORPO 3*/
+
+
+/*INICIO DO CORPO 4*/
+
+.posting {
+    display: flex;
+    justify-content: space-around;
+    width: min(1500px, 100%);
+    padding: 20px;
+    height: 50vh;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    align-items: center;
+    /*container flexivel alinhar children ao centro e separados por espaços um do outro
+    configuracoes de width e espaçamento*/
+    overflow: auto;
+}
+
+.post {
+    width: calc(33% - 10px);
+    /*calc para dar um width mais exato aos itens*/
+    height: 40vh;
+    overflow: hidden;
+    /*esconder elementos caso algum fuja do espaço*/
+    max-width: 300px;
+    /*maximo de largura que o container podera ter eh 300px*/
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.post img {
+    width: 100%;
+    border-radius: 6px;
+    transition: 0.3s linear;
+}
+
+.content-text {
+    padding: 30px;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-60px);
+    /*deslocar o item -60px verticalmente*/
+    transition: 0.3s linear;
+    font-size: .85rem;
+}
+
+.content-text h3 {
+    color: #fff;
+    font-weight: 1000;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+}
+
+.content-text span {
+    font-style: italic;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    /*eslito da fonte em italico e centralizado*/
+}
+
+.post:hover {
+    width: calc(40% - 10px);
+    overflow: visible;
+    /*posicionamento mais preciso e mostra mesmo caso fuja do container*/
+}
+
+.post:hover .content-text {
+    transform: translateY(-80px);
+    /*deslocar item verticalmente*/
+}
+
+.post:hover img {
+    transform: translateY(20px);
+    /*deslocar verticalmente*/
+}
+
+
+/*FIM DO CORPO 4*/
+
+footer {
+    width: 100%;
+    background-color: #fff;
+    height: 5vh;
+}
+
+@media screen and (max-width: 800px) {
+    /*novas configurações para telas de até 800px*/
+    .first-image {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 25px 0;
+    }
+    .second-image {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 25px 0;
+    }
+    .section-b {
+        height: 220vh;
+        margin-bottom: -155px;
+    }
+    .info-section-b {
+        flex-direction: column;
+    }
+    .second-image .text-info {
+        margin: 20px;
+    }
+    .posting {
+        justify-content: center;
+        overflow: auto;
+    }
+    .post {
+        width: 100%;
+        font-size: .75rem;
+    }
+    .post:hover {
+        width: 100%;
+        overflow: visible;
+    }
+    .post:hover .content-text {
+        transform: translateY(50);
+    }
+    
+}

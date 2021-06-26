@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: #FD79A8;
+}
+
+
+/* Div onde está localizado o Nav Bar*/
+
+.inner-width {
+    max-width: 1500px;
+    /* Definindo a largura máxima para o div*/
+    padding: 0 40px;
+    margin: auto;
+}
+
+.navbar {
+    z-index: 999;
+    /*Para o nav bar ficar sobreposto, é como se tivesse um empilhamento e ele fosse a primeira fila*/
+    position: fixed;
+    /*fixar a barra em uma posição, conforma mudança no scroll ela continua fixa*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 25px 40px;
+    display: flex;
+    /*Deixar o display flex, essa é nossa forma de alinhar coisas no meio ou fazer espaçamentos nos elementos*/
+    flex-direction: row;
+    /*Esse display flex irá ter direção em linha*/
+    justify-content: space-between;
+    /*justificando o conteudo dentro do nav bar, nesse caso, eles terão um espaço entre eles*/
+    background-color: rgba(253, 121, 168, .8);
+    transition: .3s;
+    /*transição para a mudança de cor em um sticky logo abaixo*/
+}
+
+
+/*Botão de voltar*/
+
+.return-btn {
+    background-color: #FDA7DF;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    /*deixando o botão redondo*/
+    display: flex;
+    /*Display flex para alinhar os itens no centro, tanto verticalmente e horizontalmente*/
+    align-items: center;
+    /* alinhar itens no centro verticalmente*/
+    justify-content: center;
+    /*alinhar itens no centro horizontalmente*/
+    cursor: pointer;
+    /*deixar o cursor com aquela mãozinha para click*/
+    border: 2px solid #000;
+}
+
+
+/*link dentro do botão com as mesmas configurações do botão para voltar no botão inteiro*/
+
+.return-btn a {
+    color: #000;
+    text-decoration: none;
+    /*retirando underline do link*/
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    /*deixando o display flex para centralizar e justificar o link no meio*/
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.section-aba h2 {
+    font-family: 'Dancing Script', cursive;
+    /* fonte do h2 e deixando o estilo mais cursivo para ficar mais "fru fru"*/
+    font-size: 2.5rem;
+}
+
+.space {
+    /* Como o navbar é fixo e sobreposto, as coisas colocadas depois ficam abaixo dela, esse foi uma das maneiras utilizadas para as coisas ficarem depois do navbar
+            como se fosse uma barra embaixo do navbar, só que nos mesmo empilhamento do conteudo do site*/
+    height: 120px;
+    display: fixed;
+}
+
+.sticky {
+    /*classe responsável pela mudança de cor do nav bar, conforme o scroll, foi utilizado js*/
+    background: rgba(255, 255, 255, 0.9);
+    padding: 18px 40px;
+}
+
+
+/*formatações da galeria*/
+
+
+/*Conteiner com todas as fotos*/
+
+.conteiner-photos {
+    /*largura na tela toda e deixando o display flex para centralizar a galeria */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: url(../img/fundo.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.img-content img {
+    /*Definindo as dimensões das imagens que estão na class .img-content*/
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    transition: .2s linear;
+    /*definindo tempo de transição e que a velocidade dela seja o mesmo para ida e volta*/
+}
+
+
+/*hover das img*/
+
+.img-content img:hover {
+    transform: scale(1.5);
+    /*aumenta a escala da imagem, dando um efeito de aproximação*/
+    cursor: pointer;
+}
+
+
+/*Class criada para deixar a tabela centralizada com display flex, justificando e alinhando*/
+
+.table-align {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    /*formatações da tabela*/
+    background-color: #FC427B;
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 4px solid #fff;
+    font-weight: bolder;
+}
+
+td {
+    /*formatações do td*/
+    padding: 4px 5px;
+    color: #fff;
+}
+
+
+/*class para definir formatações para quadrado de "livre pra todos os publicos"*/
+
+.green {
+    background-color: #D6A2E8;
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 28px;
+    border-radius: 10px;
+}
+
+
+/*Definindo um fundo para tabela por que muito seca e bem feia*/
+
+.container-fundo {
+    background: url(../img/fundotabela.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/*iniciando as formatações do dialog para abrir quando clicar a imagem*/
+
+.dialog {
+    /*fundo do dialog com background preto e fixado para continuar conforme o scroll*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    /*definindo tamanho e largura e sobrepondo sobre a página*/
+    height: 110vh;
+    width: 100%;
+    z-index: 999;
+    /*display como none para esconder e justificando e alinhando no centro*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-img {
+    /*Formatações do dialog onde vai aparecer a imagem*/
+    width: 500px;
+    height: 450px;
+    background-color: #f1f1f1;
+}
+
+.config-img {
+    /*Mesma formatações, porém isso aqui é pra ser usado no Js*/
+    width: 500px;
+    height: 450px;
+    z-index: -1;
+}
+
+
+/*botão de fechar*/
+
+.close {
+    /*definindo tamanho, posição e desigh*/
+    font-size: 2.5rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 20%;
+    right: 35%;
+    color: #fff;
+    background-color: #FC427B;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+/*hover para o botão de fechar*/
+
+.dialog span:hover,
+.dialog span:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*Responsividade*/
+
+
+/*A ideia é deixar tudo centralizado abaixo do outro por isso normalmente deixamos o display flex lá em cima*/
+
+@media screen and (max-width:800px) {
+    .photos {
+        /*definindo o grid com uma só coluna justificada e alinhada no centro*/
+        margin-left: 0;
+        grid-template-columns: repeat(1, auto);
+        justify-content: center;
+        align-items: center;
+    }
+    .dialog-content,
+    .dialog-img img,
+    .config-img,
+    .dialog-img {
+        /*fortamações dessas classes para se adequarem ao tamanho da tela*/
+        width: 500px;
+        height: 300px;
+    }
+    /*alinhando novamente o botão de fechar só que agora para telas menores*/
+    .close {
+        top: 30%;
+        right: 20%;
+    }
+}

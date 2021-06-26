@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylequiz.css">
+    <script defer src="../js/scriptquiz.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>Quiz Barbie</title>
+</head>
+
+<body>
+    <div class="inner-width">
+        <nav class="navbar">
+            <div class="return-btn">
+                <a href="joguinhos.html"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="section-aba">
+                <h2>QUIZ</h2>
+            </div>
+        </nav>
+    </div>
+    <div class="space">
+
+    </div>
+    <section id="ranking-container">
+        <div class="inner-container">
+            <div class="container-text">
+                <div class="text-title">
+                    <h1>Você sabe tudo sobre a Barbie?</h1>
+                    <h2>Logo abaixo veremos</h2>
+                </div>
+                <div class="text">
+                    <p>Tente superar Luiz, o rei do Kahoot!</p>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <td>Posição</td>
+                    <td align="middle">Perfil</td>
+                    <td>Nome</td>
+                    <td>Acertos</td>
+                    <td>Erros</td>
+                    <td>Medalha</td>
+                </tr>
+                <tr>
+                    <td align="middle">1°</td>
+                    <td><img src="../img/pfp-luiz.PNG" style="width: 100px; height: 100px; border-radius: 50%;" alt=""></td>
+                    <td align="middle">Luiz</td>
+                    <td align="middle">10/10</td>
+                    <td align="middle">0</td>
+                    <td align="middle">🥇</td>
+                </tr>
+                <tr>
+                    <td align="middle">2°</td>
+                    <td><img src="../img/pfp_me.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt=""></td>
+                    <td align="middle">Josivaldo</td>
+                    <td align="middle">2/10</td>
+                    <td align="middle">8</td>
+                    <td align="middle">🥈</td>
+                </tr>
+                <tr>
+                    <td align="middle">3°</td>
+                    <td><img src="../img/default.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt=""></td>
+                    <td align="middle">------</td>
+                    <td align="middle">0/10</td>
+                    <td align="middle">0</td>
+                    <td align="middle">🥉</td>
+                </tr>
+                <tr>
+                    <td align="middle">4°</td>
+                    <td><img src="../img/default.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt=""></td>
+                    <td align="middle">------</td>
+                    <td align="middle">0/10</td>
+                    <td align="middle">0</td>
+                    <td align="middle">🏅</td>
+                </tr>
+                <tr>
+                    <td align="middle">5°</td>
+                    <td><img src="../img/default.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt=""></td>
+                    <td align="middle">------</td>
+                    <td align="middle">0/10</td>
+                    <td align="middle">0</td>
+                    <td align="middle">🏅</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section id="quiz-container">
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div id="question">Pergunta</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">resposta 1</button>
+                    <button class="btn">resposta 2</button>
+                    <button class="btn">resposta 3</button>
+                    <button class="btn">resposta 4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Começar</button>
+                <button id="next-btn" class="next-btn btn hide">Próxima</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

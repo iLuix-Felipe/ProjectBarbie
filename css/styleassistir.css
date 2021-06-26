@@ -1,0 +1,365 @@
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+ * {
+     margin: 0;
+     padding: 0;
+     font-family: "Open Sans", sans-serif;
+     text-decoration: none;
+     box-sizing: border-box;
+     text-decoration: none;
+ }
+ 
+ html {
+     /*efeito de rolagem*/
+     scroll-behavior: smooth;
+ }
+ 
+ body {
+     background-color: #D6A2E8;
+     background: url(../img/fundoVideoHover.png) repeat;
+     /*fundo na página toda, e repete novamente quando acaba o tamanho*/
+     background-size: contain;
+     /*deixa a imagem de fundo toda visivel*/
+ }
+ /* Div onde está localizado o Nav Bar*/
+ 
+ .inner-width {
+     max-width: 1500px;
+     /* Definindo a largura máxima para o elemento Nav Bar não ultrapassar esse valor*/
+     padding: 0 40px;
+     margin: auto;
+ }
+ 
+ .navbar {
+     z-index: 999;
+     /*Para o nav bar ficar sobreposto, é como se tivesse um empilhamento e ele fosse a primeira fila*/
+     position: fixed;
+     /*fixar a barra em uma posição, conforma mudança no scroll ela continua fixa*/
+     width: 100%;
+     top: 0;
+     left: 0;
+     padding: 25px 40px;
+     display: flex;
+     /*Deixar o display flex, essa é nossa forma de alinhar coisas no meio ou fazer espaçamentos para organização*/
+     flex-direction: row;
+     /*Esse display flex irá ter direção em linha*/
+     justify-content: space-between;
+     /*justificando o conteudo dentro do nav bar, nesse caso, eles terão um espaço entre eles*/
+     background-color: rgba(253, 121, 168, .8);
+     transition: .3s;
+     /*tempo transição para a mudança de cor em um sticky logo abaixo*/
+ }
+ 
+ .sticky {
+     /*classe responsável pela mudança de cor do nav bar, conforme o scroll, foi utilizado js*/
+     background: rgba(255, 255, 255, 0.9);
+ }
+ 
+ .return-btn {
+     /*Botão de voltar*/
+     background-color: #FDA7DF;
+     height: 60px;
+     width: 60px;
+     border-radius: 50%;
+     /*deixando o botão redondo*/
+     display: flex;
+     /*Display flex para alinhar os itens no centro, tanto verticalmente e horizontalmente*/
+     align-items: center;
+     /* alinhar itens no centro verticalmente*/
+     justify-content: center;
+     /*alinhar itens no centro horizontalmente*/
+     cursor: pointer;
+     /*deixar o cursor com aquela mãozinha para click*/
+     border: 2px solid #000;
+ }
+ 
+ .return-btn a {
+     /*link dentro do botão com as mesmas configurações do botão para voltar no botão inteiro*/
+     color: #000;
+     text-decoration: none;
+     /*retirando underline do link*/
+     height: 60px;
+     width: 60px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+ }
+ 
+ .section-aba h2 {
+     font-family: 'Dancing Script', cursive;
+     /* fonte do h2 e deixando o estilo mais cursivo para ficar mais "fru fru"*/
+     font-size: 2.5rem;
+ }
+ 
+ .space {
+     /* Como o navbar é fixo e sobreposto, as coisas colocadas depois ficam abaixo dela, esse foi uma das maneiras utilizadas para as coisas ficarem depois do navbar
+            como se fosse uma barra embaixo do navbar, só que nos mesmo empilhamento do conteudo do site*/
+     height: 100px;
+     display: fixed;
+ }
+ 
+ .Video-Play {
+     display: flex;
+     /*foi necessário para auxiliar na responsividade para alinhar os conteudos no centro*/
+ }
+ 
+ .LocalWatch {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background: url(../img/fundoVideoHover.png) repeat;
+     background-size: cover;
+     /*redimensiona a imagem pra cobrir todo container. A ideia de repetir esses backgrounds no conteiners é para ficar mais cheio no fundo*/
+ }
+ 
+ .video-Dinamic {
+     /*Dimensões do video principal*/
+     width: 700px;
+     height: 500px;
+     border-radius: 30px;
+     margin-top: 25px;
+     margin-left: 20px;
+     background-color: black;
+     /*As margens como meio de ajustes na organização*/
+ }
+ 
+ .img-barbieTv {
+     /*Dimensões da barbie ao lado do video principal*/
+     margin: 130px 30px 0px 0px;
+     height: 490px;
+     /*As margens como meio de ajustes na organização*/
+ }
+ 
+ .content {
+     /*Content dos titulos do ep*/
+     background-color: rgba(253, 121, 168, .8);
+     width: 710px;
+     border-radius: 40px;
+     margin: 15px 15px;
+     display: flex;
+     /*display flex, para ajustar o titulo h1 no meio*/
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .content h1 {
+     font-family: 'Dancing Script', cursive;
+     padding: 20px 0;
+     font-weight: bolder;
+     /*Deixar a fonte mais negrito*/
+ }
+ 
+ .conteiner-video {
+     background: url(../img/fundoVideoHover.png) repeat;
+     background-size: cover;
+ }
+ 
+ .video {
+     width: 100%;
+     display: grid;
+     /*Deixa o conteiner como uma grade*/
+     grid-template-columns: repeat(3, auto);
+     /*Aqui define que essa grade vai ter 3 colunas*/
+     justify-content: center;
+     /* essa grade vai ser justificada no centro*/
+     align-items: center;
+     /* alinhada no centro verticalmente*/
+     gap: 15px;
+     /*Afastar os videos, tipo um vão entre eles*/
+ }
+ 
+ .video-content {
+     /* vai auxiliar nas responsividade*/
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /*definindo as dimensões */
+     width: 300px;
+     height: 200px;
+     border-radius: 30px;
+ }
+ 
+ .video-content video {
+     /*definindo as dimensões dos videos da class .video-content*/
+     width: 300px;
+     height: 200px;
+     border-radius: 30px;
+ }
+  .video-content iframe{
+      width: 300px;
+     height: 200px;
+     border-radius: 30px;   
+  }
+ /*Aqui foi uma ideia para o hover dos videos*/
+ 
+ .video-hover {
+     /*definindo esse hover com as mesmas dimensões dos videos*/
+     width: 300px;
+     height: 200px;
+     border-radius: 30px;
+     /*Cor do background do hover e a opacidade dessa cor*/
+     background-color: rgba(0, 0, 0, 0.8);
+     position: absolute;
+     /*Se posicionando ao elemento não estático, no caso os videos, ou seja, ficando abaixo deles*/
+     visibility: hidden;
+     /*deixando invisivel*/
+     cursor: pointer;
+ }
+ /*Content para o nome do episódio*/
+ 
+ .content-text {
+     width: 300px;
+     /*definindo a posição com relativa e ajustando ele conforme sua posição normal, nesse caso estou deixando abaixo da imagem*/
+     position: relative;
+     top: 191px;
+     right: 10px;
+     padding: 15px;
+     margin: 10px;
+     border-radius: 30px;
+     /*deixando as bordas arrendondas*/
+     font-size: .85rem;
+     /*tamanho da fonte*/
+     background-color: rgba(0, 0, 0, 0.8);
+     transform: translateY(-60px);
+     /*permite uma movimentação para cima*/
+     transition: 0.3s linear;
+     /*tempo de transição e o linear permite que seja a mesmo velocidade do inico ao fim*/
+ }
+ 
+ .content-text h3 {
+     /*formatando o h3 do content-text*/
+     color: #fff;
+     font-weight: 1000;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 5px;
+     text-align: center;
+ }
+ 
+ .video-hover span {
+     /*Deixando o span com icone+play no meio e com suas formatações*/
+     font-weight: bolder;
+     font-size: 24px;
+     border-bottom: 2px solid #fff;
+     /*criando uma borda para cima*/
+     border-top: 2px solid #fff;
+     /*Criando uma borda para baixo*/
+     /*A borda dá um efeito bacana*/
+     /*definindo a posição com absoluta e ajustando ele no centro dos videos*/
+     position: absolute;
+     top: 75px;
+     left: 100px;
+     right: auto;
+     bottom: auto;
+ }
+ 
+ .video-hover a {
+     color: #fff;
+ }
+ /*Mesma ideia do .video-hover porém para quando o link tiver ativado*/
+ 
+ .video-active {
+     /*deixando nas mesmas dimensões do videos, invisivel e posicionando atrás dos videos*/
+     width: 300px;
+     height: 200px;
+     border-radius: 30px;
+     background-color: rgba(0, 0, 0, 0.8);
+     position: absolute;
+     visibility: hidden;
+ }
+ 
+ .video-active span {
+     /*Formatando e alinhando o span icone + assistindo no meio*/
+     font-weight: bolder;
+     font-size: 24px;
+     border-bottom: 2px solid #fff;
+     border-top: 2px solid #fff;
+     position: absolute;
+     top: 75px;
+     left: 75px;
+     right: auto;
+     bottom: auto;
+     z-index: -1;
+ }
+ 
+ .video-active a {
+     color: #fff;
+ }
+ /*hover do .video-hover*/
+ 
+ .video-content:hover .video-hover {
+     visibility: visible;
+     /*deixando visivel o .video-hover quando passar o mouse*/
+ }
+ 
+ .video-hover:hover .content-text {
+     transform: translateY(-70px);
+     /*pequena movimentação no context text quando passar o mouse sobre o video*/
+ }
+ /*Active dos videos*/
+ 
+ .video-content:active .video-active {
+     visibility: visible;
+     /*Quando link for ativo, o video active ficar visivel*/
+ }
+ 
+ .video-content:active .video-hover {
+     visibility: hidden;
+     /*deixando o .video-hover invisivel, quando o link já estiver ativo*/
+ }
+ /*Responsividade*/
+ /*A ideia é deixar tudo centralizado abaixo do outro por isso normalmente deixamos o display flex lá em cima*/
+ 
+ @media screen and (max-width: 800px) {
+     .Video-Play {
+         /*como o display dessa classe é flex estamos alinhando e justificando no centro*/
+         justify-content: center;
+         align-items: center;
+     }
+     .LocalWatch {
+         /*definindo largura, justificando e alinhando no centro*/
+         width: 400px;
+         justify-content: center;
+         align-items: center;
+         /*definindo o comportamento como coluna e o flex wrap é pra forçar que o próximo elemento vá para baixo*/
+         flex-direction: column;
+         flex-wrap: wrap;
+     }
+     .video-Dinamic {
+         /*formatando o video para telas menores*/
+         width: 360px;
+         height: 300px;
+     }
+     .img-barbieTv {
+         /*formatando o tamanho da barbie para telas menores*/
+         margin-top: 15px;
+         width: 350px;
+         height: 500px;
+     }
+     .video {
+         /*definindo os videos do grid em 1 coluna justificados e alinhados no centro*/
+         grid-template-columns: repeat(1, auto);
+         justify-content: center;
+         align-items: center;
+     }
+     .video-hover {
+         /*só posicionando os hover no mesmo lugar dos videos*/
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+     .content {
+         /*deixando os content menor para alinhar no centro junto com os videos, esse design para telas pequenas fica mais elegante*/
+         justify-content: center;
+         align-items: center;
+         width: 380px;
+         margin: 10px 0px;
+     }
+     .conteiner-video {
+         /*essa é a div que tá com os videos e contents. Deixando ela como coluna e alinhando tudo no centro*/
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+     }
+ }
