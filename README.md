@@ -1,4 +1,4 @@
-![Logo of the project](https://github.com/iLuix-Felipe/ProjetoRetribua/blob/main/public/logobranca.png)
+![Logo of the project](https://github.com/iLuix-Felipe/ProjectBarbie/blob/main/img/barbie-icon.png)
 
 
 ## Projeto Barbie
